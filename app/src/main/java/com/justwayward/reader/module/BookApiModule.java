@@ -36,7 +36,7 @@ public class BookApiModule {
         LoggingInterceptor logging = new LoggingInterceptor(new MyLog());
         logging.setLevel(LoggingInterceptor.Level.BODY);
 
-        OkHttpClient.Builder builder = new OkHttpClient.Builder().connectTimeout(10, TimeUnit.SECONDS)
+        OkHttpClient.Builder builder = new OkHttpClient.Builder()
                 .connectTimeout(20 * 1000, TimeUnit.MILLISECONDS)
                 .readTimeout(20 * 1000, TimeUnit.MILLISECONDS)
                 .retryOnConnectionFailure(true) // 失败重发
